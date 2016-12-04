@@ -1,13 +1,16 @@
 <h1>Here they are</h1>
 
-
+<%= link_to 'New Ride', new_ride_path %>
 <% @rides.each do |ride| %>
 	<p>
 		<strong>Location: </strong>
-		<%= ride.location %><br>
+		<%= ride.location %>
 	</p>
 	<p>
 		<strong>Distance:</strong>
 		<%= ride.distance %>
+	</p>
+	<p>
+		<%= link_to 'Ride', ride_path(ride) %>
 	</p>
 <% end %>

@@ -3,8 +3,17 @@ class RidesController < ApplicationController
 	def index
 		@rides = Ride.all
 	end
+	
+	def show
+		@ride = Ride.find(params[:id])
+	end
 
 	def new
+
+	end
+
+	def edit
+		@ride = Ride.find(params[:id])
 	end
 
 	def create
@@ -14,9 +23,7 @@ class RidesController < ApplicationController
 		redirect_to @ride
 	end
 
-	def show
-		@ride = Ride.find(params[:id])
-	end
+	
 
 	private
 		def rides_params
