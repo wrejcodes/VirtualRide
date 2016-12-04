@@ -1,0 +1,13 @@
+<h1>Here they are</h1>
+
+
+<% @rides.each do |ride| %>
+	<p>
+		<strong>Location: </strong>
+		<%= ride.location %><br>
+	</p>
+	<p>
+		<strong>Distance:</strong>
+		<%= ride.distance %>
+	</p>
+<% end %>
